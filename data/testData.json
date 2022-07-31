@@ -1,0 +1,24 @@
+{
+    "gateway":{
+        "validGatewayId":"wyre",
+        "invalidGatewayId":1234
+    },
+    "rate":{
+        "validFromCurrency":"USD",
+        "validToCurrency":"ETH",
+        "validGatewayId":"wyre",
+        "validCountryId":"US",
+        "invalidFromCurrency":"TTT",
+        "invalidToCurrency":"OOO",        
+        "invalidGatewayId":"2233",
+        "invalidCountryId":"45"
+    },
+    "supported":{
+        "validCountryCode":"NL",
+        "validCurrencyId":"",
+        "invalidCountryCode":"",
+        "invalidCurrenyId":""
+    }
+    
+    
+}
