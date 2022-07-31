@@ -1,0 +1,38 @@
+{  
+  "type": "object",
+    "properties": {    
+      "id":{
+        "type":"number"
+      },  
+      "name":{
+        "type": "string"
+      },
+      "quotedRate": {
+        "type":"number"
+      },
+      "fees": {
+        "type":"number"
+      },
+      "duration":{
+        "type":"object",
+        "properties":{
+          "fetchedTime": {
+            "type": "datetime"
+          },
+          "validityPeriod":{
+            "type":"number"
+          }
+         },
+         "required":["fetchedTime","validityPeriod"],
+         "additionalProperties": false
+      },
+      "recommended":{
+        "type":"boolean"
+      },
+      "cheapest":{
+        "type":"boolean"
+      }
+    },
+    "required":["id","name","quotedRate","fees","duration","recommended","cheapest"],
+    "additionalProperties": false
+} 
