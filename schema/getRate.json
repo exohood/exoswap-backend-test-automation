@@ -1,0 +1,35 @@
+{  
+  "type": "object",
+    "properties": {    
+      "cryptoId":{
+        "type":"number"
+      },  
+      "name":{
+        "type": "string"
+      },
+      "identifier": {
+        "type":"string"
+      },
+      "paymentMethods":{
+        "type":"array",
+        "properties":{
+          "paymentTypeId": {
+            "type": "number"
+          },
+          "paymentTypeName":{
+            "type":"string"
+          },
+          "min":{
+            "type":"number"
+          },
+          "max":{
+            "type":"number"
+          }
+         },
+         "required":["paymentTypeId","paymentTypeName","min","max"],
+         "additionalProperties": false
+      }
+    },
+    "required":["cryptoId","name","identifier","paymentMethods"],
+    "additionalProperties": false
+}
