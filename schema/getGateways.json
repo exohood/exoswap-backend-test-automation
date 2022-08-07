@@ -1,0 +1,86 @@
+{  
+  "type": "object",
+    "properties": {    
+      "gatewayId":{
+        "type":"string"
+      },  
+      "gatewayName":{
+        "type": "string"
+      },
+      "supportedCountries": {
+        "type":"array"
+      },
+      "supportedCryptoCurrencies":{
+        "type":"array",
+        "properties": {
+        "name": {
+          "type": "string"
+        },
+        "identifier":{
+          "type":"string"
+        },
+        "cryptoId":{
+          "type": "string"
+        },
+        "paymentMethods":{
+          "type":"object",
+          "properties":{
+            "min":{
+              "type":"number"
+            },
+            "paymentTypeId":{
+              "type":"string"
+            },
+            "max":{
+              "type":"number"
+            },
+            "paymentTypeName":{
+              "type":"string"
+            }
+          },
+          "required":["min", "paymentTypeId","max","paymentTypeName"],
+          "additionalProperties": false
+        }
+        },
+        "required":["name", "identifier", "cryptoId","paymentMethods"],
+        "additionalProperties": false
+      },
+      "supportedFiatCurrencies":{
+        "type":"array",
+        "properties":{
+          "name": {
+            "type": "string"
+          },
+          "identifier":{
+            "type":"string"
+          },
+          "fiatId":{
+            "type": "string"
+          },
+          "paymentMethods":{
+            "type":"object",
+            "properties":{
+              "min":{
+                "type":"number"
+              },
+              "paymentTypeId":{
+                "type":"string"
+              },
+              "max":{
+                "type":"number"
+              },
+              "paymentTypeName":{
+                "type":"string"
+              }
+          },
+          "required":["min", "paymentTypeId","max","paymentTypeName"],
+          "additionalProperties": false
+          }
+         },
+         "required":["name","identifier", "fiatId", "paymentMethods"],
+         "additionalProperties": false
+      }
+    },
+    "required":["gatewayId","gatewayName","supportedCountries","supportedCryptoCurrencies","supportedFiatCurrencies"],
+    "additionalProperties": false
+} 
